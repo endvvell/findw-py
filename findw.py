@@ -110,7 +110,7 @@ if word and tree:
 
 if foundFiles:
     for z in foundFiles:
-        print(f'{z}:')
+        print(f'\033[44m{z}:\033[0m')
         for h in foundFiles[f'{z}']:
             print(f'—————— "{h[0]}" on line {h[1]}:\n {h[2]}\n\n')
 else:
