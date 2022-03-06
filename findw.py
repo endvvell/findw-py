@@ -11,7 +11,9 @@ os.system("") # to makes the ANSI escape sequence get processed correctly on Win
 
 path = None
 word = None # changing the value to 'sys.argv[1]' is especially useful if combined with the 'path' variable above. 
-# Then the script could be used without needing to specify the '-w' and '-d' options since it would only search in one place on a disk. 
+# Then the script could be used without needing to specify the '-w' and '-d' options since it would only search in one place on a disk.
+# Like so:
+# python findw.py "your_input_here"
 tree = None
 foundFiles = None
 
@@ -82,7 +84,7 @@ def searchInput(tree, userInput):
                 # the script reads all files; some of them are not in the text file format
                 # so it gives out error:
                 # UnicodeDecodeError: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte
-                # I wanted this script to read both text files formats, those ending with ".txt" and those storred as plain text.
+                # I wanted this script to read all acceptable text files formats, those ending with ".txt" and those storred as plain text.
                 # So it just skips over the files the format of which it cannot read.
                 continue
     return foundFiles
